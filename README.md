@@ -284,7 +284,7 @@ This project solved several non-obvious integration challenges:
 
 <img width="1027" height="531" alt="image" src="https://github.com/user-attachments/assets/a9894958-7b1a-4c3b-a763-a11ddcd2399b" />
 
-**Report**
+**Report:**
 
 <img width="914" height="393" alt="image" src="https://github.com/user-attachments/assets/163ab755-e9fd-434c-98d9-831718411441" />
 
