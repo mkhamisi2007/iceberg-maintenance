@@ -272,3 +272,21 @@ This project solved several non-obvious integration challenges:
 - **Trino uses Nessie API v1** (`/api/v1`) because Trino 442 bundles `nessie-client:0.71.1` which predates the v2 API. Spark uses `/api/v2` because `iceberg-spark-runtime:1.5.0` bundles `nessie-client:0.76.6`.
 - **GC must be explicitly enabled** — Nessie sets `gc.enabled=false` by default to protect data across Git-style branches. Set `'gc.enabled'='true'` on any table before running snapshot expiry or orphan cleanup.
 - **MinIO requires path-style access** — `s3.path-style-access=true` in Trino and `fs.s3a.path.style.access=true` in Spark.
+## Potos
+
+After enter seed:
+
+<img width="997" height="499" alt="image" src="https://github.com/user-attachments/assets/956e0096-3c21-4923-b356-607b9bb6ad3f" />
+
+Befor run trigger:
+
+<img width="1234" height="569" alt="image" src="https://github.com/user-attachments/assets/109027f6-ee0a-4bda-8599-f7f83dd77b71" />
+
+<img width="1027" height="531" alt="image" src="https://github.com/user-attachments/assets/a9894958-7b1a-4c3b-a763-a11ddcd2399b" />
+
+
+
+
+
+
+
