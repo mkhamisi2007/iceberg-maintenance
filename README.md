@@ -10,34 +10,34 @@ A production-style DevOps pipeline that automatically keeps Apache Iceberg table
 ┌─────────────────────────────────────────────────────────────────┐
 │                    Docker Compose Stack                         │
 │                                                                 │
-│  ┌─────────────┐    spark-submit     ┌──────────────────────┐  │
-│  │   Airflow   │ ──────────────────► │  Spark (local[*])    │  │
-│  │  Scheduler  │   (runs inside      │  inside Airflow      │  │
-│  │  0 2 * * *  │    Airflow ctn)     │  container           │  │
-│  └─────────────┘                     └──────────┬───────────┘  │
+│  ┌─────────────┐    spark-submit     ┌──────────────────────┐   │
+│  │   Airflow   │ ──────────────────► │  Spark (local[*])    │   │
+│  │  Scheduler  │   (runs inside      │  inside Airflow      │   │
+│  │  0 2 * * *  │    Airflow ctn)     │  container           │   │
+│  └─────────────┘                     └──────────┬───────────┘   │
 │                                                 │               │
 │                                    NessieCatalog│               │
 │                                    /api/v2      │               │
 │                                                 ▼               │
-│  ┌─────────────┐                   ┌────────────────────────┐  │
-│  │    Trino    │ ──── /api/v1 ───► │   Project Nessie       │  │
-│  │   :8082     │   (nessie cat.)   │   :19120               │  │
-│  └──────┬──────┘                   │   (metadata only,      │  │
-│         │                          │    no S3 access)       │  │
-│         │ S3 direct                └────────────────────────┘  │
+│  ┌─────────────┐                   ┌────────────────────────┐   │
+│  │    Trino    │ ──── /api/v1 ───► │   Project Nessie       │   │
+│  │   :8082     │   (nessie cat.)   │   :19120               │   │
+│  └──────┬──────┘                   │   (metadata only,      │   │
+│         │                          │    no S3 access)       │   │
+│         │ S3 direct                └────────────────────────┘   │
 │         │                                                       │
 │         ▼                                                       │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │                MinIO  :9000                             │   │
-│  │         s3://warehouse/data/default/sales_data/         │   │
-│  │         ├── data/          (Parquet files)              │   │
-│  │         └── metadata/      (Iceberg metadata JSON)      │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │                MinIO  :9000                             │    │
+│  │         s3://warehouse/data/default/sales_data/         │    │
+│  │         ├── data/          (Parquet files)              │    │
+│  │         └── metadata/      (Iceberg metadata JSON)      │    │
+│  └─────────────────────────────────────────────────────────┘    │
 │                                                                 │
-│  ┌─────────────┐                                               │
-│  │  Superset   │ ── SQLAlchemy ──► Trino ──► Iceberg/MinIO    │
-│  │   :8088     │   trino://admin@trino:8080/iceberg            │
-│  └─────────────┘                                               │
+│  ┌─────────────┐                                                │
+│  │  Superset   │ ── SQLAlchemy ──► Trino ──► Iceberg/MinIO      │
+│  │   :8088     │   trino://admin@trino:8080/iceberg             │
+│  └─────────────┘                                                │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
