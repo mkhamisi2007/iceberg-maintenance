@@ -274,16 +274,17 @@ This project solved several non-obvious integration challenges:
 - **MinIO requires path-style access** — `s3.path-style-access=true` in Trino and `fs.s3a.path.style.access=true` in Spark.
 ## Photos
 
-After enter seed:
+**After enter seed:
 
 <img width="997" height="499" alt="image" src="https://github.com/user-attachments/assets/956e0096-3c21-4923-b356-607b9bb6ad3f" />
 
-Befor run trigger:
+**Befor run trigger:
 
 <img width="1234" height="569" alt="image" src="https://github.com/user-attachments/assets/256bcff5-8b33-4c35-87ca-443e6e82b1bf" />
 
 <img width="1027" height="531" alt="image" src="https://github.com/user-attachments/assets/a9894958-7b1a-4c3b-a763-a11ddcd2399b" />
 
+**Report
 <img width="914" height="393" alt="image" src="https://github.com/user-attachments/assets/163ab755-e9fd-434c-98d9-831718411441" />
 
 
