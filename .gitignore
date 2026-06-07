@@ -1,0 +1,22 @@
+# Runtime credentials — never commit
+.env
+
+# Airflow runtime state
+airflow-volumes/logs/
+airflow-volumes/config/
+airflow-volumes/plugins/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Spark/Ivy dependency cache
+.ivy2/
+.spark-events/
+
+# Pipeline output — generated at runtime
+reports/
+
+# macOS metadata
+.DS_Store

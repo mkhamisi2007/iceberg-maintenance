@@ -1,0 +1,22 @@
+[iceberg]
+catalog_name = "nessie"
+warehouse_path = "s3://warehouse/data"
+target_table = "nessie.default.sales_data"
+
+[compaction]
+target_file_size_bytes = 134217728  # 128 MB
+min_input_files = 5
+
+[snapshot_expiry]
+max_snapshot_age_days = 7
+min_snapshots_to_keep = 2
+
+[orphan_cleanup]
+older_than_days = 3
+
+[schedule]
+cron = "0 2 * * *"  # Every day at 2AM
+
+[report]
+output_path = "/opt/airflow/reports"
+format = "json"
