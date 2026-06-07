@@ -282,9 +282,6 @@ Befor run trigger:
 
 <img width="1234" height="569" alt="image" src="https://github.com/user-attachments/assets/256bcff5-8b33-4c35-87ca-443e6e82b1bf" />
 
-
-<img width="1234" height="569" alt="image" src="https://github.com/user-attachments/assets/109027f6-ee0a-4bda-8599-f7f83dd77b71" />
-
 <img width="1027" height="531" alt="image" src="https://github.com/user-attachments/assets/a9894958-7b1a-4c3b-a763-a11ddcd2399b" />
 
 <img width="914" height="393" alt="image" src="https://github.com/user-attachments/assets/163ab755-e9fd-434c-98d9-831718411441" />
